@@ -1,10 +1,8 @@
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
 // import { FaMoon } from "react-icons/fa";
 // import { ImSun } from "react-icons/im";
-import { VscCoffee } from "react-icons/vsc";
-import { FaBars, FaTimes } from "react-icons/fa";
 // import { IoMoonOutline } from "react-icons/io5";
 
 const Landing = () => {
@@ -95,17 +93,6 @@ const Landing = () => {
           <Link to="/" className="no-underline hover:text-gray-300">
             Submit Tool
           </Link> */}
-          <a
-            href="https://buymeacoffee.com/amansagar"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="py-2 text-link no-underline"
-            title="Buy me a coffee"
-          >
-            <VscCoffee
-              className={`h-6 w-6 ${isDarkMode ? "text-white" : "text-black"}`}
-            />
-          </a>
 {/* 
           <button
             onClick={handleThemeToggle}
@@ -122,17 +109,14 @@ const Landing = () => {
 
         <div className="flex items-center space-x-4">
           <a
-            href="https://www.producthunt.com/posts/toolhunt?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-toolhunt"
+            href="https://github.com/athneremayur01/toolhunt"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:block text-sm"
+            className="hidden md:block"
+            title="GitHub Project"
           >
-            <img
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=478083&theme=dark"
-              alt="ToolHunt - Discover Top Tools for Designers & Developers | Product Hunt"
-              style={{ width: "170px", height: "35px" }}
-              width="180"
-              height="54"
+            <FaGithub
+              className={`h-6 w-6 ${isDarkMode ? "text-white" : "text-black"} hover:opacity-70 transition-opacity`}
             />
           </a>
 
@@ -205,42 +189,18 @@ const Landing = () => {
               </div>
             </button>  */}
 
-            <a
-              href="https://www.producthunt.com/posts/toolhunt?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-toolhunt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4"
-            >
-              <img
-                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=478083&theme=dark"
-                alt="ToolHunt - Discover Top Tools for Designers & Developers | Product Hunt"
-                style={{ width: "170px", height: "35px" }}
-                width="180"
-                height="54"
-              />
-            </a>
+            
           </div>
         )}
       </nav>
 
       <div className="main-content px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center mb-5">
-          <a
-            href="https://github.com/AmanSagar0607/ToolHunt"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="flex items-center justify-center px-6 py-1.5 sm:px-8 sm:py-2 border rounded-3xl duration-300 sm:mt-24 mt-16">
-              <FaGithub className="mr-2" />
-              <span className="poly-regular">Github</span>
-            </button>
-          </a>
-        </div>
+      
 
-        <h1 className="text-sm sm:text-3xl mt-10 sm:mt-10 font-thin sm:font-thin xl:text-4xl pl-4 pr-4 raleway-bold leading-[2rem] sm:leading-[2rem]">
+        <h1 className="text-center text-2xl sm:text-4xl lg:text-5xl xl:text-6xl mt-16 sm:mt-24 lg:mt-32 xl:mt-40 font-thin sm:font-thin px-4 raleway-bold leading-[2.5rem] sm:leading-[3rem] lg:leading-[3.5rem]">
           Unlock your project&#39;s Potential for{" "}
           <br className="block sm:block" />
-          <span className="text-3xl sm:text-5xl lg:text-7xl py-2 sm:block mt-1 sm:font-bold  sm:mt-0 leading-4.5rem] sm:leading-[4.5rem] ">
+          <span className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl py-2 sm:block mt-1 sm:font-bold sm:mt-0 leading-[3rem] sm:leading-[4rem] lg:leading-[5rem]">
             Designers & Developers
           </span>
           {/* <br className="hidden sm:block" /> */}
@@ -255,7 +215,7 @@ const Landing = () => {
         </h1> */}
 
         <h2
-          className={`text-center text-sm lg:text-lg sm:text-sm  mt-4 sm:mt-2 font-semi-bold px-1 poly-regular ${
+          className={`text-center text-base sm:text-lg lg:text-xl xl:text-2xl mt-4 sm:mt-6 font-semi-bold px-4 sm:px-8 lg:px-16 poly-regular ${
             isDarkMode ? "text-gray-100" : "text-black"
           }`}
         >
