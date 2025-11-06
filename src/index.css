@@ -1,0 +1,528 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  
+}
+
+.app-container {
+  /* background-color: #080808; */
+  /* opacity: 1; */
+  /* background-image: radial-gradient(#ffffff37 0.5px, #0000001a 0.5px); */
+  /* background-size: 20px 15px; */
+  display: flex;
+  flex-direction: column;
+  /* padding-left: 5rem;
+  padding-right: 5rem; */
+  min-height: 100vh;
+  color: #ffffff;
+  /* transition: background-color 3s ease-in-out; */
+  /* backdrop-filter: blur(10px); */
+}
+.passgen-nav {
+  background-color: #000000;
+  opacity: 1;
+  background-image: radial-gradient(#ffffff37 0.5px, #0000001a 0.5px);
+  background-size: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #ffffff;
+  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+}
+.app-container::before {
+  background-color: #000000;
+  opacity: 1;
+  background-image: radial-gradient(#ffffff0a 0.5px, #00000023 0.5px);
+  background-size: 12px 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #ffffff;
+  z-index: -1;
+  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+}
+
+
+.main-content {
+  margin-top: 5rem; /* Adjust to avoid overlap with navbar */
+  text-align: center;
+}
+
+.password-generator-section {
+  /* background-color: #000000; */
+  opacity: 1;
+  background-image: radial-gradient(#ffffff51 0.5px, #0000006e 0.5px);
+  background-size: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(105, 104, 104, 0.123);
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(27, 27, 27);
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.button-copy {
+  transition: background-color 0.2s ease;
+}
+
+.button-copy:hover {
+  color: blue;
+}
+
+.button-copy:active {
+  cursor: copy;
+}
+
+.recent-passwords {
+  background: #15151592;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.152);
+  color: rgb(198, 198, 198);
+  border-radius: 15px;
+  list-style-type: none;
+}
+
+.recent-passwords li {
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+input[type="text"] {
+  color: rgb(0, 0, 0);
+}
+
+.passInput input[type="text"] {
+  color: rgb(255, 255, 255);
+}
+
+input[type="checkbox"],
+input[type="range"],
+label {
+  color: white;
+}
+
+label {
+  font-size: 14px;
+  margin-left: 0.5rem;
+}
+
+/* Base styles for larger screens */
+.navbar {
+  backdrop-filter: blur(10px);
+  padding: 12px 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 4rem); /* Adjust width to account for larger screens */
+  margin: 1.5rem 2rem; /* Add margin for spacing */
+  top: 0;
+  z-index: 100;
+}
+
+
+/* Styles for screens less than 420px */
+@media (max-width: 420px) {
+  .landing-nav {
+    width: 100%; /* Adjust width for small screens */
+    padding: 5px; /* Adjust margin for small screens */
+    flex-direction: row; /* Stack ToolHunt and ProductHunt vertically */
+    align-items: center;
+    padding-top: 15px;
+  }
+
+  
+  .passgen-nav {
+    opacity: 1;
+    background-image: radial-gradient(#ffffff55 0.5px, #0000003c 0.5px);
+    background-size: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #ffffff;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+  }
+  .app-container {
+    /* background-color: #000000;
+    opacity: 1;
+    background-image: radial-gradient(#ffffff31 0.5px, #0000006e 0.5px); */
+    /* background-size: 20px 15px;
+    display: flex;
+    flex-direction: column; */
+    min-height: 100vh;
+    color: #ffffff;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+  }
+  
+
+}
+
+
+/* .landing-sub-text:hover{
+  background:#575757;
+} */
+/* Styles for screens less than 900px */
+@media (max-width: 1000px) {
+  .navbar {
+    width: calc(100% - 4rem); /* Adjust width for medium screens */
+    margin: 1rem 2rem; /* Adjust margin for medium screens */
+  }
+}
+
+/* Styles for screens less than 420px */
+@media (max-width: 420px) {
+  .navbar {
+    width: calc(100% - 4rem); /* Adjust width for small screens */
+    margin: 1rem 2rem; /* Adjust margin for small screens */
+  }
+  .landing-nav {
+    width: calc(100% - 4rem); /* Adjust width for small screens */
+    margin: 1rem 2rem; /* Adjust margin for small screens */
+  }
+  /* .footer {
+    padding: 0rem;
+    align-items: center;
+    margin-top: 10px;
+  } */
+}
+
+.footer {
+  /* background-color: rgba(17, 17, 17, 0); */
+  backdrop-filter: blur(10px);
+  color: rgb(255, 255, 255);
+  padding: 1rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /* border: 0.5px solid rgba(0, 0, 0, 0.725); */
+  width: 100%;
+
+  z-index: 100;
+}
+
+.button-link {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #f5f5ff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.text-link {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 420px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .text-link {
+    padding: 0.5rem 1rem;
+  }
+
+
+  
+  .navbar .flex {
+    flex-direction: column;
+    /* background: #030303; */
+  }
+}
+
+.cards-container {
+  /* display: flex;
+  flex-wrap: no-wrap; */
+  /* justify-content: auto; */
+  gap: 1.5rem;
+  border-radius: 24px;
+  padding: 1rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  /* background: rgba(255, 255, 255, 0.112); 
+  backdrop-filter: blur(10px); 
+  border: 1px solid rgba(255, 255, 255, 0.057);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
+}
+
+
+/* Styles for cards */
+/* Existing styles for cards */
+/*  */
+.cards {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+/* Styles for cards */
+.card {
+  background: rgb(14, 14, 14);
+  border-radius: 16px;
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);*/
+  border: 1px solid rgba(255, 255, 255, 0.636); 
+  padding: 2.3rem;
+  text-align: center;
+  /* color: white;
+  display: flex; */
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smooth transitions */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(101, 101, 101, 0.48);
+}
+
+
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #2a9d8f;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3a59d5;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 640px) {
+  .cards-container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    align-items: center;
+    padding-top: 3rem;
+  }
+  .footer {
+    padding: 0rem;
+    /* background-color: #586db9; */
+    padding-top: 40px;
+    padding-bottom: 40px;
+    align-items: center;
+  margin-top: 10px;
+  }
+  .card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 840px) {
+  .cards-container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    align-items: center;
+    padding-top: 3rem;
+  }
+
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+
+/* Inspiration Page Styles */
+.inspiration-page .header {
+  background-color: #f5f5f5;
+}
+
+.inspiration-page .content {
+  padding: 2rem;
+}
+
+.inspiration-page .card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.inspiration-page .card:hover {
+  box-shadow: 0 6px 12px rgb(255, 255, 255);
+}
+
+.footer-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #ffffff;
+}
+
+/* .getstarted {
+  background: #e81717;
+} */
+
+/* google font */
+.poly-regular {
+  font-family: "Poly", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poly-regular-italic {
+  font-family: "Poly", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Additional styles for components, if necessary */
+/* Tailwind CSS dark mode styles */
+.dark .bg-black {
+  background-color: black;
+}
+
+.dark .text-white {
+  color: white;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.text-black {
+  color: black;
+}
+/* Navbar transition */
+/* .navbar {
+  transition: background-color 3s ease, border-color 3s ease;
+} */
+
+/* Theme toggle button */
+/* .theme-toggle-button {
+  transition: transform 3s ease, box-shadow 3s ease, background-color 3s ease;
+} */
+
+/* .theme-toggle-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+} */
+
+/* Icon transitions */
+.icon-sun {
+  color: #fbbf24; /* Sun icon color */
+  transition: transform 3s ease;
+}
+
+.icon-moon {
+  color: #4b5563; /* Moon icon color */
+  transition: transform 3s ease;
+}
+
+
+@media (max-width: 780px) {
+  .responsive-input {
+    padding-left: 50px; /* Adjust left padding */
+    padding-right: px; /* Adjust right padding */
+    padding-top: 12px;  /* Adjust top padding */
+    padding-bottom: 12px;  /* Adjust bottom padding */
+    width: 90%; /* Ensure full width on small screens */
+    font-size: 14px; /* Slightly reduce font size for small screens */
+  }
+  .responsive-searchbar{
+    padding-left: 38px;
+  }
+}
+
+
+.breadcrumbs a {
+  text-decoration: none; /* Remove underline by default */
+  color: #9ca3af; /* Gray color for breadcrumb links */
+  transition: color 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+  color: #6b7280; /* Darker gray color on hover */
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+
+/* Google Font */
+.handjet-custom {
+  font-family: "Handjet", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900; /* Adjust weight as needed */
+  font-style: normal;
+  font-variation-settings:
+    "ELGR" 1,
+    "ELSH" 2;
+}
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Example for different weights or styles */
+.raleway-light {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.raleway-bold {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
