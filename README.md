@@ -1,7 +1,5 @@
 # ToolHunt - Tool Resources Finder
 
-![ToolHunt Banner](./src/assets/header.png)
-
 ToolHunt is a modern tool finder built with React and Vite, styled using Tailwind CSS. This platform allows designers and developers to discover and explore top tools and resources with ease. With features like customizable search, categorized listings, and a sleek user interface, ToolHunt aims to provide a user-friendly experience for finding the best tools to unleash your creativity.
 
 ## Features
@@ -61,4 +59,5 @@ Contributions are welcome! Please open an issue or submit a pull request with yo
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
