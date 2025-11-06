@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { VscCoffee } from "react-icons/vsc";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaGithub } from "react-icons/fa";
 // import { ImSun } from "react-icons/im";
 // import { IoMoonOutline } from "react-icons/io5";
 import PropTypes from "prop-types";
@@ -47,25 +46,6 @@ const Navbar = ({ isDarkMode }) => {
         <Link to="/home" className="no-underline hover:text-gray-300">
           Home
         </Link>
-        <a
-          href="https://forms.gle/jbuSLLtW2ATke3649"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="no-underline hover:text-gray-300"
-        >
-          Submit Tool
-        </a>
-        <a
-          href="https://buymeacoffee.com/amansagar"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="py-2 text-link no-underline"
-          title="Buy me a coffee"
-        >
-          <VscCoffee
-            className={`h-6 w-6 ${isDarkMode ? "text-white" : "text-black"}`}
-          />
-        </a>
 
         {/* <button
           onClick={toggleTheme}
@@ -88,17 +68,14 @@ const Navbar = ({ isDarkMode }) => {
 
       <div className="flex items-center space-x-4">
         <a
-          href="https://www.producthunt.com/posts/toolhunt?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-toolhunt"
+          href="https://github.com/athneremayur01/toolhunt"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:block text-sm"
+          className="hidden md:block"
+          title="GitHub Project"
         >
-          <img
-            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=478083&theme=dark"
-            alt="ToolHunt - Discover Top Tools for Designers & Developers | Product Hunt"
-            style={{ width: "170px", height: "35px" }}
-            width="180"
-            height="54"
+          <FaGithub
+            className={`h-6 w-6 ${isDarkMode ? "text-white" : "text-black"} hover:opacity-70 transition-opacity`}
           />
         </a>
 
@@ -120,15 +97,6 @@ const Navbar = ({ isDarkMode }) => {
           >
             Home
           </Link>
-          <a
-            href="https://forms.gle/jbuSLLtW2ATke3649"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="py-2 no-underline hover:text-gray-400"
-            onClick={toggleMenu}
-          >
-            Submit Tool
-          </a>
           <Link
             to="/"
             className="py-2 no-underline hover:text-gray-400"
@@ -136,18 +104,6 @@ const Navbar = ({ isDarkMode }) => {
           >
             ToolHunt
           </Link>
-
-          <a
-            href="https://buymeacoffee.com/amansagar"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="py-2 text-link no-underline"
-            title="Buy me a coffee"
-          >
-            <VscCoffee
-              className={`h-6 w-6 ${isDarkMode ? "text-white" : "text-black"}`}
-            />
-          </a>
 
           {/* <button
             onClick={toggleTheme}
@@ -168,17 +124,14 @@ const Navbar = ({ isDarkMode }) => {
           </button> */}
 
           <a
-            href="https://www.producthunt.com/posts/toolhunt?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-toolhunt"
+            href="https://github.com/athneremayur01/toolhunt"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4"
+            title="GitHub Project"
           >
-            <img
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=478083&theme=dark"
-              alt="ToolHunt - Discover Top Tools for Designers & Developers | Product Hunt"
-              style={{ width: "170px", height: "35px" }}
-              width="180"
-              height="54"
+            <FaGithub
+              className={`h-6 w-6 ${isDarkMode ? "text-white" : "text-black"} hover:opacity-70 transition-opacity`}
             />
           </a>
         </div>
