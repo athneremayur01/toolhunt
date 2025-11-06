@@ -18,7 +18,7 @@ To get started with ToolHunt, follow these steps:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/AmanSagar0607/toolhunt.git
+    git clone https://https://github.com/athneremayur01/toolhunt
     ```
 
 2. **Navigate to the Project Directory**:
@@ -62,7 +62,3 @@ Contributions are welcome! Please open an issue or submit a pull request with yo
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contact
-
-For any questions or feedback, please reach out to [Aman Sagar](mailto:amansagar0307@gmail.com).
-Portfolio Profile: [Aman Sagar](https://bento.me/amansagar)
